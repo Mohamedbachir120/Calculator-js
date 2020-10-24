@@ -1,0 +1,54 @@
+.result{
+    color: white;
+}
+.main{
+    margin-left: 30%;
+    margin-top: 10%;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: darkslategrey;
+    border-radius:13px ;
+    padding-bottom: 10px;
+}
+.numbers{
+    margin-left: 10px;
+    max-width: 380px;
+    display: grid;
+    grid-template-columns:  auto auto auto;
+    grid-gap: 5px;
+
+}
+.screen{
+    
+    padding: 10px;
+    margin-left: 10px;
+    width: 350px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 13px;
+    height: 40px;
+    border:white 1px solid ;
+    box-shadow: 2px 2px 2px 2px black;
+    
+}
+button{
+    display: inline-grid;
+    padding: 10px;
+    border-radius:7px ;
+  
+  border: none;
+  font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+}
+.operator{
+    background-color: lightgreen;
+}
+.operation{
+    background-color: lightblue;
+}
+.equal{
+    background-color: red;
+}
