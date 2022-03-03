@@ -3,46 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body>
-        <div class="main">
+<body class="d-flex flex-row justify-content-center" style="background: rgb(253, 253, 253); ">
+        <div class="main  col-lg-3 col-md-8 col-sm-12 pt-2 ps-2 shadow-lg" style="z-index: 100;">
       
             <p class="result"></p>
-            <p class="screen" contenteditable=""> </p>
-        <div class="numbers">
-            <button onclick="nb_func('9')">9</button>
-            <button onclick="nb_func('8')">8</button>
-            <button onclick="nb_func('7')">7</button>
-            <button onclick="nb_func('6')">6</button>
-            <button onclick="nb_func('5')">5</button>
-            <button onclick="nb_func('4')">4</button>
-            <button onclick="nb_func('3')">3</button>
-            <button onclick="nb_func('2')">2</button>
-            <button onclick="nb_func('1')">1</button>
-            <button onclick="nb_func('0')">0</button>
-            <button onclick="par_func('(')">(</button>
-            <button onclick="par_func(')')">)</button> 
-            <button onclick="op_func()" >.</button>
-        
-            <button onclick="opartor_func('+')" class="operator">+</button>
-            <button onclick="opartor_func('-')" class="operator">-</button>
-            <button onclick="opartor_func('/')" class="operator">/</button>
-            <button onclick="opartor_func('x')" class="operator">x</button>
-            <button onclick="u_op_func('cos')" class="operation">cos</button>
-            <button onclick="u_op_func('sin')" class="operation">sin</button>
-            <button onclick="clear_all()" class="operation">clear</button>
-            
-            <button onclick="equal_func()" class="equal">=</button>
+            <p class="screen me-4 p-4" contenteditable=""> </p>
          
-          
+            <div class="d-flex flex-row">
+            <div class="col-9">
+            <div class="d-flex flex-row my-2">
+               
+                <button onclick="u_op_func('cos')" class="operation mx-2 col-3 bg-light text-secondary shadow-sm">cos</button>
+                <button onclick="u_op_func('sin')" class="operation mx-2 col-3 bg-light text-secondary shadow-sm">sin</button>
+                <button onclick="clear_all()" class="operation mx-2 col-3 bg-light text-secondary shadow-sm">clear</button>
+            </div>
+            <div class="d-flex flex-row my-2">
+
+                <button onclick="par_func('(')" class="operator mx-2 col-3 bg-light text-secondary shadow-sm">(</button>
+                <button onclick="par_func(')')" class="operator mx-2 col-3 bg-light text-secondary shadow-sm">)</button>
+                <button onclick="u_op_func('%')" class="operation col-3 mx-2 oper shadow-sm">%</button>
+            </div>
+
+
+            <div class="d-flex flex-row my-2">
+
+                <button onclick="nb_func('7')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">7</button>
+                <button onclick="nb_func('8')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">8</button>
+                <button onclick="nb_func('9')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">9</button>
+            </div>
+            <div class="d-flex flex-row my-2">
+
+                <button onclick="nb_func('4')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">4</button>
+                <button onclick="nb_func('5')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">5</button>
+                <button onclick="nb_func('6')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">6</button>
+            </div>
+            <div class="d-flex flex-row my-2">
+
+                <button onclick="nb_func('1')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">1</button>
+                <button onclick="nb_func('2')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">2</button>
+                <button onclick="nb_func('3')" class="col-3 mx-2 bg-light text-primary fw-bold shadow-sm">3</button>
+            </div>
+            <div class="d-flex flex-row my-2">
+                <button onclick="nb_func('0')" class="col-7 ms-2 bg-light me-2 text-primary fw-bold shadow-sm">0</button>
+                <button onclick="op_func()" class="col-3 me-1 ms-2 bg-light text-primary fw-bold shadow-sm">.</button>
+            </div> 
+        </div>  
+        <div class="d-flex-flex-column col-3">
+            <button onclick="opartor_func('/')" class="operator me-2 my-2 col-9 bg-light text-secondary shadow-sm">/</button>
+            <button onclick="opartor_func('-')" class="operator me-2 my-2 col-9 oper shadow-sm">-</button>
+            <button onclick="opartor_func('x')" class="operator me-2 my-2 col-9 oper shadow-sm">x</button>
+            <button onclick="opartor_func('+')" class="operator me-2 my-2 col-9 py-4 oper shadow-sm">+</button>
+            <button onclick="equal_func()" class="equal me-2 my-2 col-9 py-4 bg-primary text-light">=</button>
         </div>
+
+        </div>
+
+
+            
+            
+            
+            
+
+          
     </div>
 
-
+    
+    
 </body>
+
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
 
 <script>
     
@@ -199,6 +235,7 @@ function u_op_func(element){
     }
     function clear_all(){
         $('.screen').text('');
+        $('.result').text('');
     }
     function nb_func(txt){
         var val= $('.screen').text();
